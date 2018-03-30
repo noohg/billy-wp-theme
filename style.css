@@ -1,0 +1,555 @@
+/*
+	Theme Name: Billy
+	Theme URI: http://html5blank.com
+	Description: Empty IKEA shelves ready to be filled ! - Based on HTML5Blank
+	Version: 2.0
+	Author: Nooh & Todd Motto
+	Author URI: http://nooh.fr
+	Tags: Blank, HTML5, CSS3, Ikea, Billy
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* reset */
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0
+}
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font-size: 15px;
+  font-family: Helvetica, Arial, 'sans serif';
+  line-height: 1.2;
+	color:#464646;
+	min-height: 100vh;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+
+hr {
+}
+
+/* reset links */
+a {
+	color: currentcolor;
+	text-decoration: none;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+
+/* Form reset */
+
+input, button, select {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-user-select: none
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* main */
+main {
+  position: relative;
+}
+
+/* wrappers */
+.wrapper {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+	position: relative;
+  overflow: hidden;
+}
+
+.boxed {
+	max-width:1000px;
+	width:100%;
+	margin:0 auto;
+}
+
+/* header / footer */
+header {
+  z-index: 800;
+}
+header ul, footer ul {
+  padding: 0;
+  margin: 0;
+}
+header li, footer li {
+  list-style-type: none;
+}
+
+/* Content */
+
+.content p {
+  margin: 0;
+}
+.content p + p {
+  margin-top: 0.5em;
+}
+.content h5, h6 {
+  margin: 0;
+}
+.content * + h2, .content * + h3, .content * + h4, .content * + h5 {
+  margin-top: 1em;
+}
+.content h1 + *, .content h2 + *, .content h3 + *, .content h4 + *, .content h5 + * {
+  margin-top: 0.75em;
+}
+
+/*------------------------------------*\
+    COMPONENTS
+\*------------------------------------*/
+
+/* TITLES */
+
+/* BOXES */
+
+/* ACCORDIONS */
+
+/* FORM */
+
+/* BUTTONS */
+.button {
+
+}
+.button-primary {
+
+}
+.button-secondary {
+
+}
+.button-large {
+
+}
+.button-small {
+
+}
+
+/* CAROUSELS */
+
+/* PAGINATION */
+
+/*------------------------------------*\
+    COLOR
+\*------------------------------------*/
+
+.text-white { color: #ffffff; }
+
+/* Colors */
+
+/* Links */
+
+/* Backgrounds */
+.bg-grey-dk { background-color: #333333; }
+.bg-grey-lg { background-color: #f2f2f2; }
+
+/* Borders */
+
+/*------------------------------------*\
+    MODIFIERS
+\*------------------------------------*/
+
+.is-hidden { display: none !important; }
+.is-invisible { visibility: none !important; }
+
+.block { display: block !important; }
+.inline { display: inline !important; }
+.inline-block { display: inline-block !important; }
+
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+
+.text-left { text-align: left   !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right  !important; }
+
+.item-center { margin-left: auto; margin-right: auto; }
+
+/* FONT SIZE  */
+small, .text-small { font-size: 0.8em; }
+.text-big { font-size: 1.2em; }
+.text-large { font-size: 1.5em; }
+
+/* MARGINS */
+.mt0 { margin-top: 0 !important; }
+.mt1 { margin-top: 1em !important; }
+.mt2 { margin-top: 2em !important; }
+.mt3 { margin-top: 3em !important; }
+.mb0 { margin-bottom: 0 !important; }
+.mb1 { margin-bottom: 1em !important; }
+.mb2 { margin-bottom: 2em !important; }
+.mb3 { margin-bottom: 3em !important; }
+
+
+/*------------------------------------*\
+    HEADER LARGE
+\*------------------------------------*/
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Logo */
+
+/* Nav */
+
+/*------------------------------------*\
+    HEADER MOBILE
+\*------------------------------------*/
+
+/* Logo */
+
+/* Nav */
+
+/*------------------------------------*\
+    HOME PAGE
+\*------------------------------------*/
+
+/*------------------------------------*\
+    GLOBALES PAGES
+\*------------------------------------*/
+.content.boxed {
+  /* max-width: 800px; */
+}
+.content a {
+}
+.content h2 {
+}
+.content h3 {
+}
+.content h4 {
+}
+
+/*------------------------------------*\
+    SPECIFICS PAGES
+\*------------------------------------*/
+
+/* Contact */
+
+/* Search */
+
+/* Archive */
+
+/* 404 */
+
+/* Espace membre */
+
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+
+/* Nav */
+
+/* Cookie Notice */
+#cookie-notice {
+  background-color: rgba(0,0,0,0.8) !important;
+}
+#cookie-notice .cn-set-cookie {
+  color: #ffffff;
+  background-color: #005BA8;
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 3px 6px 2px 6px
+}
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+  white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/* Edit link */
+.post-edit-link {
+  display: block;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+/* Large screen (TV) */
+@media only screen and (min-width:1280px) {
+
+}
+
+/* Large camputer screen */
+@media only screen and (max-width:1140px) {
+
+}
+
+/* Medium camputer screen */
+@media only screen and (max-width:1024px) {
+
+}
+
+/* Tablet */
+@media only screen and (max-width:768px) {
+
+}
+
+/* Smartphone */
+@media only screen and (max-width:480px) {
+
+}
+
+/* Tiny phones */
+@media only screen and (max-width:320px) {
+
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    INTERNET EXPLORER 9-10
+\*------------------------------------*/
+
+@media screen and (min-width:0\0) {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
